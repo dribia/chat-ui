@@ -10,6 +10,7 @@ export interface Conversation extends Timestamps {
 	userId?: User["_id"];
 
 	model: string;
+	embeddingModel: string;
 
 	title: string;
 	messages: Message[];
@@ -17,4 +18,6 @@ export interface Conversation extends Timestamps {
 	meta?: {
 		fromShareId?: string;
 	};
+
+	preprompt?: string;
 }
